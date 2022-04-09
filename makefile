@@ -6,5 +6,5 @@ run:
       --publish 8080:8080 --publish 50000:50000 \
       --volume jenkins-data:/var/jenkins_home \
       --volume jenkins-docker-certs:/certs/client:ro \
-      --mount type=bind,source="$(pwd)/backup/",target=/srv/backup \
+      --mount type=bind,source=/Users/bernardo/git/jenkins/backup/,target=/srv/backup \
       jenkins:1.0
