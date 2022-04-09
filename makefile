@@ -6,5 +6,5 @@ run:
       --publish 8080:8080 --publish 50000:50000 \
       --volume jenkins-data:/var/jenkins_home \
       --volume jenkins-docker-certs:/certs/client:ro \
-      -v jenkins_backup:/srv/backup \
+      --volume jenkins_backup:/srv/backup \
       jenkins:1.0
