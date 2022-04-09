@@ -14,3 +14,4 @@ RUN echo 2.112 > /usr/share/jenkins/ref/jenkins.install.InstallUtil.lastExecVers
 COPY ./plugins/plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+COPY --chown=jenkins:jenkins config /var/jenkins_home
